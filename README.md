@@ -1,1 +1,1 @@
-# PAMSI
+Repozytorium zalozone na potrzeby kursu Projektowanie algorytmow i metod sztucznej inteligencji.
