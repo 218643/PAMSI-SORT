@@ -1,4 +1,7 @@
 FLAGI=-g -pedantic -Wall -std=c++0x
 
-program: src/tabdyn.cpp
-	g++ ${FLAGI} -o program src/tabdyn.cpp
+program2: src/zad3.cpp
+	g++ ${FLAGI} -o program2 src/zad3.cpp
+
+program1: src/tabdyn.cpp
+	g++ ${FLAGI} -o program1 src/tabdyn.cpp
