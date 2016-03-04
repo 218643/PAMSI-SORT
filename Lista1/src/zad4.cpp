@@ -1,65 +1,41 @@
 #include <cstdio>
 #include <unistd.h>
-#include <string>
+#include <string.h>
+#include <cstdlib>
 #include <fstream>
 #include <iomanip>
 #include <iostream>
 
 using namespace std;
 
-int IleZnakow(string Tab) //funkcja zwraca ilosc znakow stringa
-{
-int i=0;
- while(Tab[i]!='\0')
-   {
-     i++;
-   }
-return i;
-}
 
 bool jestPal(string testStr)
 {
-  int i=0;
-  int j=IleZnakow(testStr)-1;
+  
+  if(testStr.length()==0 || testStr.length()==1 )
+    return true;
 
-  if(IleZnakow(testStr) % 2 == 1 ) //czy ilosc znakow nieparzysta?
-      {
-      while(i!=j)
-	{
-	  if(testStr[i]==testStr[j]) 
-	    {
-	      i++;
-	      j--;
-	    }
-	  else
-	    {
-	      return false;
-	    }
-	}
-      }
-  else   //gdy napis ma parzysta ilosc znakow
+  if(testStr[0]==testStr[testStr.length()-1])
     {
-      while(i!=IleZnakow(testStr)/2+1)
-	{
-	  if(testStr[i]==testStr[j]) 
-	    {
-	      i++;
-	      j--;
-	    }
-	  else
-	    {
-	      return false;
-	    }
-	}
+      testStr.erase(0,1);
+      testStr.pop_back();
+      jestPal(testStr);
+      return true;
     }
-  return true;
+  else 
+    return false; 
+
 }
 
 int main()
 {
   string a;
-  cout << "Podaj stringa do sprawdzenia."<< endl;
+  cout << "Podaj slowo: "  << endl;
   cin >> a;
-  cout << jestPal(a)<<endl;
+
+  if(jestPal(a))
+    cout << "To jest palindrom!"<< endl;
+  else
+    cout << "To nie jest palindrom!"<<endl;
   return 0;
 }
