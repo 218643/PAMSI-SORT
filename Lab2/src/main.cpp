@@ -14,7 +14,7 @@ int main()
 {
   test_tab Testuj;
 
-  Testuj.run(10000,10);
+  Testuj.run(50000000,10);
   Testuj.wyswietl_wynik();
   return 0;
 }

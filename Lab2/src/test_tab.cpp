@@ -49,10 +49,12 @@ bool test_tab::run(int dystans,int laps)
     {
       Tablica tab(10);
       start();
-      for(int i=0; i<dystans; i++)
+      int i;
+      for(i=0; i<dystans; i++)
 	{
-	  tab.dopisz(i,i+1);
+	  tab.dopiszx2(i,i+1);
 	}
+      tab.dotnij(i);
       stop();
       lap--;
       Tab_Wyn[lap]=get_time();
@@ -65,7 +67,7 @@ bool test_tab::run(int dystans,int laps)
 
 void test_tab:: wyswietl_wynik()
 {
-  int srednio=0;
+  float srednio=0;
   cout << "Tablica z wynikami:" << endl;
   for (int i=0; i<10;i++)
     {

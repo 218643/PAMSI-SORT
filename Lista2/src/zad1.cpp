@@ -26,7 +26,6 @@ bool jestPal(string testStr)
       else 
 	return false;
     } 
-
 }
 
 int main()

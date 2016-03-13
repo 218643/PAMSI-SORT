@@ -13,7 +13,7 @@ protected:
   clock_t sta;
   clock_t end;
   int lap;
-  long Tab_Wyn[ILOSC_OKRAZEN];
+  float Tab_Wyn[ILOSC_OKRAZEN];
 public:
   //Konstruktor ustawia wszystkie flagi na 0.
   test_tab();
