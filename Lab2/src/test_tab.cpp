@@ -14,7 +14,7 @@ test_tab::test_tab()
 {
   size=0;
   sta=0;
-  sta=0;
+  end=0;
   lap=0;
 }
 
