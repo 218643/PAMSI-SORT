@@ -1,5 +1,5 @@
 
-class Istots
+class Ikolejka
 {
 public:
   //Sprawdzanie, czy kolejka jest pusta.
@@ -11,12 +11,12 @@ public:
   //Sciaganie elementu z poczatku kolejki.
   virtual string pop()=0;
 
-  //Zwraca wartosc ze szczytu stosu, bez jej usuwania.
+  //Zwraca wartosc poczatkowa,bez jej usuwania.
   virtual string front()=0;
 
   //Zwraca wartosc statniego elemetu kolejki, bez jej usuwania.
   virtual strin end()=0;
   
-  //Zwraca ilosc elementow na stoosie.
+  //Zwraca ilosc elementow w kolejce.
   virtual int size()=0;
 };
