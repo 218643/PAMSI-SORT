@@ -8,13 +8,24 @@
 
 using namespace std;
 
-#include "test_tab.hh"
+
+#include"Lista.hh"
+
 
 int main()
 {
-  test_tab Testuj;
+  Tablica tab;
+  Lista ll;
 
-  Testuj.run(50000000,10);
-  Testuj.wyswietl_wynik();
-  return 0;
+  ll.empty();
+
+  int i;
+
+  for(i=0;i<10;i++)
+    {
+      tab.dopiszx2(i,"Ala");
+    }
+  tab.dotnij(i);
+  tab.wyswietl();
+
 }

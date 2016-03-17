@@ -6,7 +6,7 @@ public:
   virtual bool empty()=0;  
   
   //Wrzucanie elementu na odpowiednie miejsce na liscie
-  virtual bool push(string element,int indeks)=0;
+  virtual void push(string element,int indeks)=0;
 
   //Usuwanie elementow listy od start do end, przy traceniu ich wartosci.
   virtual bool erase(int start,int end)=0;

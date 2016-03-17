@@ -15,7 +15,7 @@ public:
   virtual string front()=0;
 
   //Zwraca wartosc statniego elemetu kolejki, bez jej usuwania.
-  virtual strin end()=0;
+  virtual string end()=0;
   
   //Zwraca ilosc elementow w kolejce.
   virtual int size()=0;
