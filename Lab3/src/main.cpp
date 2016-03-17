@@ -14,18 +14,10 @@ using namespace std;
 
 int main()
 {
-  Tablica tab;
-  Lista ll;
+  Lista ll("pieske");
+
+  ll.push("aza",1);
 
   ll.empty();
-
-  int i;
-
-  for(i=0;i<10;i++)
-    {
-      tab.dopiszx2(i,"Ala");
-    }
-  tab.dotnij(i);
-  tab.wyswietl();
 
 }

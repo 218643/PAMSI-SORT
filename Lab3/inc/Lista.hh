@@ -1,10 +1,9 @@
 #include "Ilista.hh"
-#include "Tablica.hh"
 
-class Elem
+class Kaf // Komorka twrzaca liste
 {
-  Elem* prev;
-  Elem* next;
+  Kaf* prev;
+  Kaf* next;
   string wartosc;
   friend class Lista;
 };
@@ -12,8 +11,8 @@ class Elem
 class Lista: public Ilista
 {
 protected:
-  Elem* przod;
-  Elem* tyl;
+  Kaf* przod;
+  Kaf* tyl;
 public:
 
   //konstruktor bezparametryczny

@@ -12,15 +12,22 @@ using namespace std;
 
 Lista:: Lista()
 {
-  //przod=NULL;
+  przod=NULL;
   tyl=NULL;
 }
 
-//Lista:: Lista(string elem)
-//{
-  //  Lista* kafelek1=new Lista();
-//}
+//Konstruktor parametryczny, twrzy kafelek i sprawia, ze oba wskazniki klasy
+//Lista wskazuja na niego
+Lista:: Lista(string elem)
+{
+  Kaf* kafelek=new Kaf(); //tworze nowy kafelek
+  kafelek->next=NULL; //nastepny element to NULL
+  kafelek->prev=NULL; //poprzedni element to NULL
+  przod=kafelek;     //wskaznik przod klasy Lista wsakazuje na nowy kafelek
+  tyl=kafelek;      //tyl rowniez
+}
 
+//Metoda zwraca true, gdy lista pusta, false, gdy cos na niej jest
 bool Lista:: empty()
 {
   if(przod==NULL && tyl==NULL)
@@ -39,9 +46,25 @@ bool Lista:: empty()
 
 void Lista::push(string element,int indeks)
 {
-  // Lista* kafelek1=new Lista;
-
-
+  if(empty()) //jezeli pusta - to samo co w konstruktorze param.
+    {
+      Kaf* kafelek=new Kaf();
+      kafelek->next=NULL; 
+      kafelek->prev=NULL; 
+      przod=kafelek;     
+      tyl=kafelek;  
+    }
+  else
+    {
+      Kaf* kafelek2=new Kaf();
+      kafelek2->prev=przod; //prev wskazuje na pierwszy element na liscie
+      kafelek2->next=NULL;  //next to NULL
+      kafelek2->wartosc=element;
+      przod->next=kafelek2;
+      przod=kafelek2;
+      
+      
+    }
 }
   
 
