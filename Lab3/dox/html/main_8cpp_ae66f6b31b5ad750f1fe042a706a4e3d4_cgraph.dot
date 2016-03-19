@@ -1,0 +1,19 @@
+digraph "main"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Lista::erase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lista.html#aebd2c212b7d034833564f88f1bd88905",tooltip="Metoda erase dla obiektow klasy Lista. Usuwanie elementow listy od start do end, przy traceniu ich wa..."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Lista::push_ind",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lista.html#a9d4a9e631fcd6a461fb5bb8e6a67aebc",tooltip="Metoda push_ind dla obiektow klasy Lista. Dodaje element we wskazane miejsce na liscie. "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Lista::size",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lista.html#a3836382e3cf53b6ea281937d045d181c",tooltip="Metoda size dla obiektow klasy Lista. Zwraca ilosc elementow na liscie. "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Lista::push_front",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lista.html#ad31ead4509b03137a784cdd0a87de399",tooltip="Metoda push_front dla obiektow klasy Lista. Dodaje element na poczatek listy. "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Lista::push_back",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lista.html#ac53a86c8897b04851b566b6c273a010e",tooltip="Metoda push_back dla obiektow klasy Lista. Dodaje element na koniec listy. "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Lista::pop_front",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lista.html#ab62a75161593d8fbf596ce2ad5c7f1ea",tooltip="Metoda pop_front dla obiektow klasy Lista. Usuwana jeden element z przodu listy,zwraca jeg wartosc..."];
+}
