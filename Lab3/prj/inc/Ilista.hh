@@ -24,7 +24,7 @@ public:
   virtual string pop_back()=0;
   
   //Zwraca wartosc z podanego miejsca na liscie, nie usuwajac elementu.
-  virtual string get(int indeks)=0;
+  virtual string get()=0;
   
   //Zwraca ilosc elementow na liscie.
   virtual int size()=0;

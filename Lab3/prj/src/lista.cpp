@@ -56,9 +56,12 @@ bool Lista:: empty()
     }
 }
 
-string Lista:: get(int indeks)
+string Lista:: get()
   {
-    return przod->wartosc;
+    if(!empty())
+      return przod->wartosc;
+    else
+      return "/n";
   }
 
 
@@ -71,7 +74,6 @@ int Lista:: size()
     {
       while(bufo!=NULL)
 	{
-	  cout << bufo->wartosc << endl;
 	  bufo=bufo->prev;
 	  n++;
 	}
