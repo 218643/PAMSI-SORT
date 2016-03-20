@@ -20,5 +20,6 @@ var dir_72345776cd6700fb0dedb8f1faaa0c00 =
       [ "Kaf", "class_kaf.html", "class_kaf" ],
       [ "Lista", "class_lista.html", "class_lista" ]
     ] ],
-    [ "Stos.hh", "_stos_8hh.html", null ]
+    [ "Stos.hh", "_stos_8hh.html", null ],
+    [ "test_lista.hh", "test__lista_8hh.html", "test__lista_8hh" ]
 ];

@@ -32,7 +32,6 @@
    <div id="projectname">Lista test
    &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">aaa</div>
   </td>
  </tr>
  </tbody>
@@ -94,7 +93,7 @@ $(document).ready(function(){initNavTree('class_irunnable.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -113,17 +112,24 @@ $(document).ready(function(){initNavTree('class_irunnable.html','');});
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="_irunnable_8hh_source.html">Irunnable.hh</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Irunnable:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_irunnable__inherit__graph.png" border="0" usemap="#_irunnable_inherit__map" alt="Inheritance graph"/></div>
+<map name="_irunnable_inherit__map" id="_irunnable_inherit__map">
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae3ca2c4df53e58affbe64777791856f8"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_irunnable.html#ae3ca2c4df53e58affbe64777791856f8">run</a> (int dystans, int laps)=0</td></tr>
-<tr class="separator:ae3ca2c4df53e58affbe64777791856f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2969277d1c4806efb8d71f7f30157d5c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_irunnable.html#a2969277d1c4806efb8d71f7f30157d5c">run</a> (int Argc, char *Argv[])=0</td></tr>
+<tr class="separator:a2969277d1c4806efb8d71f7f30157d5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="_irunnable_8hh_source.html#l00001">1</a> of file <a class="el" href="_irunnable_8hh_source.html">Irunnable.hh</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ae3ca2c4df53e58affbe64777791856f8"></a>
+<a class="anchor" id="a2969277d1c4806efb8d71f7f30157d5c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -134,13 +140,13 @@ Public Member Functions</h2></td></tr>
           <td class="memname">virtual bool Irunnable::run </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>dystans</em>, </td>
+          <td class="paramname"><em>Argc</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>laps</em>&#160;</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>Argv</em>[]&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -155,6 +161,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Implemented in <a class="el" href="classtest__lista.html#a160a9d47a0faf196700d1fcbae1a84de">test_lista</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
@@ -166,7 +174,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_irunnable.html">Irunnable</a></li>
-    <li class="footer">Generated on Sat Mar 19 2016 20:05:12 for Lista test by
+    <li class="footer">Generated on Mon Mar 21 2016 00:08:39 for Lista test by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

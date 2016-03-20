@@ -14,15 +14,11 @@ protected:
 public:
   
   test_lista();
-  
   virtual void start();
   virtual void stop();
   virtual long get_time();  
-  void wyswietl_wynik();
-  //zwraca wylsowane slowo z listy 
+  void wyswietl_wynik(); 
   string losuj_slowo();
-  
   void szukaj(string los);
-  
   virtual bool run(int Argc,char* Argv[]); 
 };

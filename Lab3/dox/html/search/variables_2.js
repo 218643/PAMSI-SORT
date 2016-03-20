@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tyl',['tyl',['../class_lista.html#a743839ea42c682bfc5790ca13595ba75',1,'Lista']]]
+  ['przod',['przod',['../class_lista.html#a9d8a90668ff75e643f67c3108fb11ab7',1,'Lista']]]
 ];

@@ -32,7 +32,6 @@
    <div id="projectname">Lista test
    &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">aaa</div>
   </td>
  </tr>
  </tbody>
@@ -93,6 +92,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="#index_r"><span>r</span></a></li>
       <li><a href="#index_s"><span>s</span></a></li>
       <li><a href="#index_t"><span>t</span></a></li>
+      <li><a href="#index_w"><span>w</span></a></li>
       <li class="current"><a href="#index_~"><span>~</span></a></li>
     </ul>
   </div>
@@ -116,7 +116,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -137,6 +137,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </li>
 <li>end()
 : <a class="el" href="class_ikolejka.html#a97b8f3e73828625507195b225c067617">Ikolejka</a>
+, <a class="el" href="classtest__lista.html#a2656c95a0e809aa62e547e924d20e140">test_lista</a>
 </li>
 <li>erase()
 : <a class="el" href="class_ilista.html#aaa607480b445e5edff31280254a1a108">Ilista</a>
@@ -155,11 +156,12 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 <h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
 <li>get()
-: <a class="el" href="class_ilista.html#a4d030adf74d748a8ebc9019a4d15aaf5">Ilista</a>
-, <a class="el" href="class_lista.html#a3d480cf0f766995e30a2afca8a24b424">Lista</a>
+: <a class="el" href="class_ilista.html#ae437c3a135d45f5d05638ae4bfc783d3">Ilista</a>
+, <a class="el" href="class_lista.html#a404b1bd093a4ea7a36da6800fe1de881">Lista</a>
 </li>
 <li>get_time()
 : <a class="el" href="class_istoper.html#ad60532c7431335ff0996c9ab05bc965f">Istoper</a>
+, <a class="el" href="classtest__lista.html#a6edf573a2a93b4a535b954e0dc46e466">test_lista</a>
 </li>
 </ul>
 
@@ -168,6 +170,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>Lista
 : <a class="el" href="class_kaf.html#ae4fecdd4873df780beac2cef64580e88">Kaf</a>
 , <a class="el" href="class_lista.html#a1f668b36909182ef1360b48503529a31">Lista</a>
+</li>
+<li>losuj_slowo()
+: <a class="el" href="classtest__lista.html#af96f9349155e1b4381e8941faf58e3e9">test_lista</a>
 </li>
 </ul>
 
@@ -216,33 +221,59 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 <h3><a class="anchor" id="index_r"></a>- r -</h3><ul>
 <li>run()
-: <a class="el" href="class_irunnable.html#ae3ca2c4df53e58affbe64777791856f8">Irunnable</a>
+: <a class="el" href="class_irunnable.html#a2969277d1c4806efb8d71f7f30157d5c">Irunnable</a>
+, <a class="el" href="classtest__lista.html#a160a9d47a0faf196700d1fcbae1a84de">test_lista</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
+<li>siz
+: <a class="el" href="classtest__lista.html#a14134385d5d2c1964b8e4d077d099e7e">test_lista</a>
+</li>
 <li>size()
 : <a class="el" href="class_ikolejka.html#a9801f5160bce91148850ad2e35ee92cc">Ikolejka</a>
 , <a class="el" href="class_ilista.html#add591a02ac8685d3abcdb1e1b09be039">Ilista</a>
 , <a class="el" href="class_istots.html#af296fb89e8704d808ba9941472f7183e">Istots</a>
 , <a class="el" href="class_lista.html#a3836382e3cf53b6ea281937d045d181c">Lista</a>
 </li>
+<li>sta
+: <a class="el" href="classtest__lista.html#a2e4a53120ebbea1db80d4b93cf929de6">test_lista</a>
+</li>
 <li>start()
 : <a class="el" href="class_istoper.html#a20f7eb32cd77738bf53253685fbe87a4">Istoper</a>
+, <a class="el" href="classtest__lista.html#a0874e340c6714fb2fc37294f64622b98">test_lista</a>
 </li>
 <li>stop()
 : <a class="el" href="class_istoper.html#a39b8e1f206e63b0e7a1b1832df00b928">Istoper</a>
+, <a class="el" href="classtest__lista.html#a091adb7b7c644e5621d5de7ac0c904e9">test_lista</a>
+</li>
+<li>szukaj()
+: <a class="el" href="classtest__lista.html#a19aaeedd95ccdf0f6c0ddc2efce233be">test_lista</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_t"></a>- t -</h3><ul>
+<li>test_lista
+: <a class="el" href="class_kaf.html#aba630750ae4180c3fa03f95c81863b4e">Kaf</a>
+, <a class="el" href="classtest__lista.html#a011c457206eacabd376a0d0071dd6d3f">test_lista</a>
+</li>
 <li>top()
 : <a class="el" href="class_istots.html#abea61d62dca5f3b571a22473ea2198b5">Istots</a>
 </li>
 <li>tyl
 : <a class="el" href="class_lista.html#a743839ea42c682bfc5790ca13595ba75">Lista</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_w"></a>- w -</h3><ul>
+<li>wynik
+: <a class="el" href="classtest__lista.html#ae2162ed0c0cf6b4b227f3aaf404f8f88">test_lista</a>
+</li>
+<li>wyswietl_wynik()
+: <a class="el" href="classtest__lista.html#abe219205c52b1e152cf16fb71140686f">test_lista</a>
 </li>
 </ul>
 
@@ -257,7 +288,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Mar 19 2016 20:05:12 for Lista test by
+    <li class="footer">Generated on Mon Mar 21 2016 00:08:39 for Lista test by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
