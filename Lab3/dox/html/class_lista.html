@@ -32,7 +32,6 @@
    <div id="projectname">Lista test
    &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">aaa</div>
   </td>
  </tr>
  </tbody>
@@ -94,7 +93,7 @@ $(document).ready(function(){initNavTree('class_lista.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -140,9 +139,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5835622414bb8a1083322251fa27a3f1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lista.html#a5835622414bb8a1083322251fa27a3f1">empty</a> ()</td></tr>
 <tr class="memdesc:a5835622414bb8a1083322251fa27a3f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda empty dla obiekyw klasy <a class="el" href="class_lista.html">Lista</a>. Sprawdza czy na liscie znajduja sie jakies elementy.  <a href="#a5835622414bb8a1083322251fa27a3f1">More...</a><br/></td></tr>
 <tr class="separator:a5835622414bb8a1083322251fa27a3f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d480cf0f766995e30a2afca8a24b424"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lista.html#a3d480cf0f766995e30a2afca8a24b424">get</a> (int indeks)</td></tr>
-<tr class="memdesc:a3d480cf0f766995e30a2afca8a24b424"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda get dla obiektow klasy <a class="el" href="class_lista.html">Lista</a>. Zwraca wartosc z podanego miejsca na liscie, nie usuwajac elementu.  <a href="#a3d480cf0f766995e30a2afca8a24b424">More...</a><br/></td></tr>
-<tr class="separator:a3d480cf0f766995e30a2afca8a24b424"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a404b1bd093a4ea7a36da6800fe1de881"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lista.html#a404b1bd093a4ea7a36da6800fe1de881">get</a> ()</td></tr>
+<tr class="memdesc:a404b1bd093a4ea7a36da6800fe1de881"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda get dla obiektow klasy <a class="el" href="class_lista.html">Lista</a>. Zwraca wartosc z podanego miejsca na liscie, nie usuwajac elementu.  <a href="#a404b1bd093a4ea7a36da6800fe1de881">More...</a><br/></td></tr>
+<tr class="separator:a404b1bd093a4ea7a36da6800fe1de881"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3836382e3cf53b6ea281937d045d181c"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lista.html#a3836382e3cf53b6ea281937d045d181c">size</a> ()</td></tr>
 <tr class="memdesc:a3836382e3cf53b6ea281937d045d181c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda size dla obiektow klasy <a class="el" href="class_lista.html">Lista</a>. Zwraca ilosc elementow na liscie.  <a href="#a3836382e3cf53b6ea281937d045d181c">More...</a><br/></td></tr>
 <tr class="separator:a3836382e3cf53b6ea281937d045d181c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -179,7 +178,7 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_lista_8hh_source.html#l00023">23</a> of file <a class="el" href="_lista_8hh_source.html">Lista.hh</a>.</p>
+<p>Definition at line <a class="el" href="_lista_8hh_source.html#l00024">24</a> of file <a class="el" href="_lista_8hh_source.html">Lista.hh</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a1f668b36909182ef1360b48503529a31"></a>
 <div class="memitem">
@@ -195,8 +194,9 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Konstruktor bezparametryczny dla obiektow klasy <a class="el" href="class_lista.html">Lista</a>. </p>
+<p>Konstruktor bezparametryczny dla obiektow klasy <a class="el" href="class_lista.html">Lista</a>. Ustawia wskazniki listy na NULL;. </p>
 
-<p>Definition at line <a class="el" href="lista_8cpp_source.html#l00015">15</a> of file <a class="el" href="lista_8cpp_source.html">lista.cpp</a>.</p>
+<p>Definition at line <a class="el" href="lista_8cpp_source.html#l00026">26</a> of file <a class="el" href="lista_8cpp_source.html">lista.cpp</a>.</p>
 
 </div>
 </div>
@@ -215,8 +215,15 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Konstruktor parametryczny dla obiektow klasy <a class="el" href="class_lista.html">Lista</a>. </p>
+<p>Konstruktor parametryczny dla obiektow klasy <a class="el" href="class_lista.html">Lista</a> Twrzy kafelek i sprawia, ze oba wskazniki klasy <a class="el" href="class_lista.html">Lista</a> wskazuja na niego.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">elem</td><td>- slowo, ktore ma zostac wpisane do kafelka. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definition at line <a class="el" href="lista_8cpp_source.html#l00023">23</a> of file <a class="el" href="lista_8cpp_source.html">lista.cpp</a>.</p>
+<p>Definition at line <a class="el" href="lista_8cpp_source.html#l00037">37</a> of file <a class="el" href="lista_8cpp_source.html">lista.cpp</a>.</p>
 
 </div>
 </div>
@@ -234,8 +241,9 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Destruktor dla obiektow klasy <a class="el" href="class_lista.html">Lista</a>. </p>
+<p>Destruktor elementow klasy lista. Usuwa obiekty klasy <a class="el" href="class_lista.html">Lista</a> po zakonczeniu pracy programu/funkcji. Przechodzi po kazdym z elementow listy i kasuje je. Gdy ilosc elementow jest rowna jeden, kasuje go a nastepnie nastawiam wszystkie wskazniki na NULL. </p>
 
-<p>Definition at line <a class="el" href="lista_8cpp_source.html#l00266">266</a> of file <a class="el" href="lista_8cpp_source.html">lista.cpp</a>.</p>
+<p>Definition at line <a class="el" href="lista_8cpp_source.html#l00368">368</a> of file <a class="el" href="lista_8cpp_source.html">lista.cpp</a>.</p>
 
 </div>
 </div>
@@ -262,10 +270,12 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Metoda empty dla obiekyw klasy <a class="el" href="class_lista.html">Lista</a>. Sprawdza czy na liscie znajduja sie jakies elementy. </p>
+<p>Metoda empty dla obiektow klasy <a class="el" href="class_lista.html">Lista</a> Metoda sprawdza, czy wskazniki klasy <a class="el" href="class_lista.html">Lista</a> nastawione sa na NULL. Gdy tak- lista pusta, gdy nie-na liscie znajduje sie element.</p>
+<dl class="section return"><dt>Returns</dt><dd>Zwraca true, gdy lista pusta w przeciwnym razie false. </dd></dl>
 
 <p>Implements <a class="el" href="class_ilista.html#a56ab56757dd796f5bc854a8e86a5c6b1">Ilista</a>.</p>
 
-<p>Definition at line <a class="el" href="lista_8cpp_source.html#l00035">35</a> of file <a class="el" href="lista_8cpp_source.html">lista.cpp</a>.</p>
+<p>Definition at line <a class="el" href="lista_8cpp_source.html#l00054">54</a> of file <a class="el" href="lista_8cpp_source.html">lista.cpp</a>.</p>
 
 </div>
 </div>
@@ -302,23 +312,15 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Metoda erase dla obiektow klasy <a class="el" href="class_lista.html">Lista</a>. Usuwanie elementow listy od start do end, przy traceniu ich wartosci. (metoda jeszcze niedopracowana) </p>
+<p>Metoda erase dla obiektow klasy <a class="el" href="class_lista.html">Lista</a> Sciagac bedzie ona wybrana ilosc elementow z wybranego miejsca na liscie. </p>
 
 <p>Implements <a class="el" href="class_ilista.html#aaa607480b445e5edff31280254a1a108">Ilista</a>.</p>
 
-<p>Definition at line <a class="el" href="lista_8cpp_source.html#l00229">229</a> of file <a class="el" href="lista_8cpp_source.html">lista.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_lista_aebd2c212b7d034833564f88f1bd88905_icgraph.png" border="0" usemap="#class_lista_aebd2c212b7d034833564f88f1bd88905_icgraph" alt=""/></div>
-<map name="class_lista_aebd2c212b7d034833564f88f1bd88905_icgraph" id="class_lista_aebd2c212b7d034833564f88f1bd88905_icgraph">
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="lista_8cpp_source.html#l00325">325</a> of file <a class="el" href="lista_8cpp_source.html">lista.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a3d480cf0f766995e30a2afca8a24b424"></a>
+<a class="anchor" id="a404b1bd093a4ea7a36da6800fe1de881"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -328,8 +330,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">string Lista::get </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>indeks</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -341,10 +342,12 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Metoda get dla obiektow klasy <a class="el" href="class_lista.html">Lista</a>. Zwraca wartosc z podanego miejsca na liscie, nie usuwajac elementu. </p>
+<p>Metoda get dla obiektow klasy <a class="el" href="class_lista.html">Lista</a> Metoda sprawdza co znajduje sie w miejscu pola wartosc.</p>
+<dl class="section return"><dt>Returns</dt><dd>Zwraca wartosc elementu, ktory znajduje sie na przodie listy. </dd></dl>
 
-<p>Implements <a class="el" href="class_ilista.html#a4d030adf74d748a8ebc9019a4d15aaf5">Ilista</a>.</p>
+<p>Implements <a class="el" href="class_ilista.html#ae437c3a135d45f5d05638ae4bfc783d3">Ilista</a>.</p>
 
-<p>Definition at line <a class="el" href="lista_8cpp_source.html#l00049">49</a> of file <a class="el" href="lista_8cpp_source.html">lista.cpp</a>.</p>
+<p>Definition at line <a class="el" href="lista_8cpp_source.html#l00073">73</a> of file <a class="el" href="lista_8cpp_source.html">lista.cpp</a>.</p>
 
 </div>
 </div>
@@ -370,10 +373,12 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Metoda pop_front dla obiektow klasy <a class="el" href="class_lista.html">Lista</a>. Usuwana jeden element z tylu listy,zwraca jeg wartosc. </p>
+<p>Metoda pop_back dla obiektow klasy <a class="el" href="class_lista.html">Lista</a> Sciaga ona element z tylu listy. Jezeli lista jest pusta, wyswietlany jest odpowiedni komunikat. Jezeli na liscie znajduje sie element wprowadzam zmienna pomocnicza tmp nastepnie sciagam wartosc kafelka do zmienneja. Jezeli element jest jedyny na liscie, wtedy sprawiam, ze lista jest pusta, nastawiajac przod i tyl na NULL, potem kasujac tmp. Jezeli nie jest to jedyny element na liscie, to przesuwam tyl na nastepny element, nastepnie kasuje tmp. Za kazdym razem zmniejszam wartosc nr, by nastawic odpowiedni rozmiar listy.</p>
+<dl class="section return"><dt>Returns</dt><dd>a - Slowo, ktore znajdowalo sie na sciagnietym elemencie. </dd></dl>
 
 <p>Implements <a class="el" href="class_ilista.html#ac4705a6ec2b7d90651075072e18d7f50">Ilista</a>.</p>
 
-<p>Definition at line <a class="el" href="lista_8cpp_source.html#l00195">195</a> of file <a class="el" href="lista_8cpp_source.html">lista.cpp</a>.</p>
+<p>Definition at line <a class="el" href="lista_8cpp_source.html#l00288">288</a> of file <a class="el" href="lista_8cpp_source.html">lista.cpp</a>.</p>
 
 </div>
 </div>
@@ -399,19 +404,12 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Metoda pop_front dla obiektow klasy <a class="el" href="class_lista.html">Lista</a>. Usuwana jeden element z przodu listy,zwraca jeg wartosc. </p>
+<p>Metoda pop_front dla obiektow klasy <a class="el" href="class_lista.html">Lista</a> Sciaga ona element z przodu listy. Jezeli lista jest pusta, wyswietlany jest odpowiedni komunikat. Jezeli na liscie znajduje sie element wprowadzam zmienna pomocnicza tmp nastepnie sciagam wartosc kafelka do zmienneja. Jezeli element jest jedyny na liscie, wtedy sprawiam, ze lista jest pusta, nastawiajac przod i tyl na NULL, potem kasujac tmp. Jezeli nie jest to jedyny element na liscie, to przesuwam przod na poprzedni element, nastepnie kasuje tmp. Za kazdym razem zmniejszam wartosc nr, by nastawic odpowiedni rozmiar listy.</p>
+<dl class="section return"><dt>Returns</dt><dd>a - Slowo, ktore znajdowalo sie na sciagnietym elemencie. </dd></dl>
 
 <p>Implements <a class="el" href="class_ilista.html#ac5ea4ae2335b111255b2398544f02808">Ilista</a>.</p>
 
-<p>Definition at line <a class="el" href="lista_8cpp_source.html#l00161">161</a> of file <a class="el" href="lista_8cpp_source.html">lista.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_lista_ab62a75161593d8fbf596ce2ad5c7f1ea_icgraph.png" border="0" usemap="#class_lista_ab62a75161593d8fbf596ce2ad5c7f1ea_icgraph" alt=""/></div>
-<map name="class_lista_ab62a75161593d8fbf596ce2ad5c7f1ea_icgraph" id="class_lista_ab62a75161593d8fbf596ce2ad5c7f1ea_icgraph">
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="lista_8cpp_source.html#l00242">242</a> of file <a class="el" href="lista_8cpp_source.html">lista.cpp</a>.</p>
 
 </div>
 </div>
@@ -438,19 +436,17 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Metoda push_back dla obiektow klasy <a class="el" href="class_lista.html">Lista</a>. Dodaje element na koniec listy. </p>
+<p>Metoda push_back dla obiektow klasy <a class="el" href="class_lista.html">Lista</a> Wpisuje ona nowy element na tyl listy. Jezeli lista jest pusta, zostaja podjete dzialania analogiczne do tych przy konstruktorze parametrycznym. Jezeli na liscie znajduje sie element wskaznik next nowego elementu zaczyna wskazywac na ten same element na ktory wskazywal tyl, nastepnie wskaznik prev dotychczasowego ostatniego elementu zaczyna wskazywac na nowy element. Przesuwam wskaznik tyl na nowy element, wpisuje slowo w pole wartosc.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">element</td><td>- Slowo, ktore ma zostac wpisane w nowy element. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="class_ilista.html#ac611067f3afce36f1317739174aeb031">Ilista</a>.</p>
 
-<p>Definition at line <a class="el" href="lista_8cpp_source.html#l00096">96</a> of file <a class="el" href="lista_8cpp_source.html">lista.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_lista_ac53a86c8897b04851b566b6c273a010e_icgraph.png" border="0" usemap="#class_lista_ac53a86c8897b04851b566b6c273a010e_icgraph" alt=""/></div>
-<map name="class_lista_ac53a86c8897b04851b566b6c273a010e_icgraph" id="class_lista_ac53a86c8897b04851b566b6c273a010e_icgraph">
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="lista_8cpp_source.html#l00151">151</a> of file <a class="el" href="lista_8cpp_source.html">lista.cpp</a>.</p>
 
 </div>
 </div>
@@ -477,19 +473,17 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Metoda push_front dla obiektow klasy <a class="el" href="class_lista.html">Lista</a>. Dodaje element na poczatek listy. </p>
+<p>Metoda push_front dla obiektow klasy <a class="el" href="class_lista.html">Lista</a> Wpisuje ona nowy element na przod listy. Jezeli lista jest pusta, zostaja podjete dzialania analogiczne do tych konstruktorze parametrycznym. Jezeli na liscie znajduje sie element wskaznik prev nowego elementu zaczyna wskazywac na ten same element na ktory wskazywal przod, nastepnie wskaznik next dotychczasowego pierwszego elementu zaczyna wskazywac na nowy element. Przesuwam wskaznik przod na nowy element, wpisuje slowo w pole wartosc.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">element</td><td>- Slowo, ktore ma zostac wpisane w nowy element. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="class_ilista.html#a9e95541837663ab04834c61513c18fd3">Ilista</a>.</p>
 
-<p>Definition at line <a class="el" href="lista_8cpp_source.html#l00074">74</a> of file <a class="el" href="lista_8cpp_source.html">lista.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_lista_ad31ead4509b03137a784cdd0a87de399_icgraph.png" border="0" usemap="#class_lista_ad31ead4509b03137a784cdd0a87de399_icgraph" alt=""/></div>
-<map name="class_lista_ad31ead4509b03137a784cdd0a87de399_icgraph" id="class_lista_ad31ead4509b03137a784cdd0a87de399_icgraph">
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="lista_8cpp_source.html#l00117">117</a> of file <a class="el" href="lista_8cpp_source.html">lista.cpp</a>.</p>
 
 </div>
 </div>
@@ -526,19 +520,18 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Metoda push_ind dla obiektow klasy <a class="el" href="class_lista.html">Lista</a>. Dodaje element we wskazane miejsce na liscie. </p>
+<p>Metoda push_ind dla obiektow klasy <a class="el" href="class_lista.html">Lista</a> Wpisuje ona nowy element w dowolne miejsce na liscie. Jezeli lista jest pusta, zostaja podjete dzialania analogiczne do tych konstruktorze parametrycznym. Jezeli indeks przewyzsza rozmiar tablicy(ktory jest zapisany w zmiennej nr) wtedy podejmowane jest dzialanie analogiczne do tego w push_front Jezeli indeks jest mniejszy niz rozmiar tablicy cofam sie dzieki zmiennej pomocnicznej tmp do odpowiedniego miejscs i zmieniam wartosc pola element. Jezeli na liscie znajduje sie element wskaznik.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">element</td><td>- Slowo, ktore ma zostac wpisane w nowy element. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ind</td><td>- Miejsce, w ktore ma zostac wpisany nowy element. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="class_ilista.html#afb97e2dd76e5479057ce0043476677e9">Ilista</a>.</p>
 
-<p>Definition at line <a class="el" href="lista_8cpp_source.html#l00119">119</a> of file <a class="el" href="lista_8cpp_source.html">lista.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_lista_a9d4a9e631fcd6a461fb5bb8e6a67aebc_icgraph.png" border="0" usemap="#class_lista_a9d4a9e631fcd6a461fb5bb8e6a67aebc_icgraph" alt=""/></div>
-<map name="class_lista_a9d4a9e631fcd6a461fb5bb8e6a67aebc_icgraph" id="class_lista_a9d4a9e631fcd6a461fb5bb8e6a67aebc_icgraph">
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="lista_8cpp_source.html#l00187">187</a> of file <a class="el" href="lista_8cpp_source.html">lista.cpp</a>.</p>
 
 </div>
 </div>
@@ -564,19 +557,12 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Metoda size dla obiektow klasy <a class="el" href="class_lista.html">Lista</a>. Zwraca ilosc elementow na liscie. </p>
+<p>Metoda size dla obiektow klasy <a class="el" href="class_lista.html">Lista</a> Metoda tworzy zmienna pomocnicza bufo, ktora wskazuje na to samo miejsce co poczatek listy a nastepnie poprzez wskaznik na poprzedni element przesuwa sie az do konca listy, przy okazji zwiekszajac n. Gdy napotka NULL oznacza to, ze zmienna dotarla do konca listy.</p>
+<dl class="section return"><dt>Returns</dt><dd>n - Zwraca rozmiar listy. </dd></dl>
 
 <p>Implements <a class="el" href="class_ilista.html#add591a02ac8685d3abcdb1e1b09be039">Ilista</a>.</p>
 
-<p>Definition at line <a class="el" href="lista_8cpp_source.html#l00056">56</a> of file <a class="el" href="lista_8cpp_source.html">lista.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_lista_a3836382e3cf53b6ea281937d045d181c_icgraph.png" border="0" usemap="#class_lista_a3836382e3cf53b6ea281937d045d181c_icgraph" alt=""/></div>
-<map name="class_lista_a3836382e3cf53b6ea281937d045d181c_icgraph" id="class_lista_a3836382e3cf53b6ea281937d045d181c_icgraph">
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="lista_8cpp_source.html#l00089">89</a> of file <a class="el" href="lista_8cpp_source.html">lista.cpp</a>.</p>
 
 </div>
 </div>
@@ -599,7 +585,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_lista_8hh_source.html#l00028">28</a> of file <a class="el" href="_lista_8hh_source.html">Lista.hh</a>.</p>
+<p>Definition at line <a class="el" href="_lista_8hh_source.html#l00029">29</a> of file <a class="el" href="_lista_8hh_source.html">Lista.hh</a>.</p>
 
 </div>
 </div>
@@ -621,7 +607,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_lista_8hh_source.html#l00026">26</a> of file <a class="el" href="_lista_8hh_source.html">Lista.hh</a>.</p>
+<p>Definition at line <a class="el" href="_lista_8hh_source.html#l00027">27</a> of file <a class="el" href="_lista_8hh_source.html">Lista.hh</a>.</p>
 
 </div>
 </div>
@@ -643,7 +629,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_lista_8hh_source.html#l00027">27</a> of file <a class="el" href="_lista_8hh_source.html">Lista.hh</a>.</p>
+<p>Definition at line <a class="el" href="_lista_8hh_source.html#l00028">28</a> of file <a class="el" href="_lista_8hh_source.html">Lista.hh</a>.</p>
 
 </div>
 </div>
@@ -657,7 +643,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_lista.html">Lista</a></li>
-    <li class="footer">Generated on Sat Mar 19 2016 20:05:12 for Lista test by
+    <li class="footer">Generated on Mon Mar 21 2016 00:08:39 for Lista test by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

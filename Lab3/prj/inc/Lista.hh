@@ -18,6 +18,7 @@ class Kaf // Kafelka twrzaca liste
   Kaf* next;
   string wartosc;
   friend class Lista;
+  friend class test_lista;
 };
 
 class Lista: public Ilista
@@ -48,7 +49,7 @@ public:
    *\brief Metoda get dla obiektow klasy Lista.
    * Zwraca wartosc z podanego miejsca na liscie, nie usuwajac elementu. 
    */
-  virtual string get(int indeks);
+  virtual string get();
 
   /*!
    *\brief Metoda size dla obiektow klasy Lista.

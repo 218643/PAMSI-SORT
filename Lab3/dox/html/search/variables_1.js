@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['przod',['przod',['../class_lista.html#a9d8a90668ff75e643f67c3108fb11ab7',1,'Lista']]]
+  ['nr',['nr',['../class_lista.html#a93d8ef6f5a68422466117a2ded8dcbcf',1,'Lista']]]
 ];

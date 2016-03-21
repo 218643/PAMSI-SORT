@@ -16,3 +16,4 @@ obj/test_lista.o: src/test_lista.cpp inc/test_lista.hh inc/Irunnable.hh inc/Isto
 	g++ -c ${FLAGS} -o obj/test_lista.o src/test_lista.cpp
 make clear:
 	rm -r obj/*
+	rm Lab3

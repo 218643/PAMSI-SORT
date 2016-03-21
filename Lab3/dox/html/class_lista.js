@@ -5,7 +5,7 @@ var class_lista =
     [ "~Lista", "class_lista.html#a4d7394b2728a00ad8404965b2e15d096", null ],
     [ "empty", "class_lista.html#a5835622414bb8a1083322251fa27a3f1", null ],
     [ "erase", "class_lista.html#aebd2c212b7d034833564f88f1bd88905", null ],
-    [ "get", "class_lista.html#a3d480cf0f766995e30a2afca8a24b424", null ],
+    [ "get", "class_lista.html#a404b1bd093a4ea7a36da6800fe1de881", null ],
     [ "pop_back", "class_lista.html#a4841d20bb3fb5df668e3a1113f0e05dc", null ],
     [ "pop_front", "class_lista.html#ab62a75161593d8fbf596ce2ad5c7f1ea", null ],
     [ "push_back", "class_lista.html#ac53a86c8897b04851b566b6c273a010e", null ],

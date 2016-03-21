@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['_7elista',['~Lista',['../class_lista.html#a4d7394b2728a00ad8404965b2e15d096',1,'Lista']]]
+  ['wynik',['wynik',['../classtest__lista.html#ae2162ed0c0cf6b4b227f3aaf404f8f88',1,'test_lista']]],
+  ['wyswietl_5fwynik',['wyswietl_wynik',['../classtest__lista.html#abe219205c52b1e152cf16fb71140686f',1,'test_lista']]]
 ];

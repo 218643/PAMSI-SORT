@@ -9,15 +9,13 @@
 using namespace std;
 
 
-#include"Lista.hh"
+#include"test_lista.hh"
 
 //Argc - zawiera informacje o ilosci komend wpisanych do terminala.
 //Argv[] - tablica, zawiera nazwy wpisacnych komend, plikow.
 int main(int Argc, char* Argv[])
 {
-  fstream plik; //zmienna pozwalajaca otworzyc strumien plikowy
-  plik.open(Argv[1],ios::in); //otwarcie strumienia plikowego
-  if(plik.good()) //jezeli udalo sie otworzyc plik
-
-  plik.close(); //zamkniecie strumienia plikowego
+  test_lista test;  
+  test.run(Argc,Argv);
+  test.wyswietl_wynik();
 }

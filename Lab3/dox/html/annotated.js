@@ -6,5 +6,6 @@ var annotated =
     [ "Istoper", "class_istoper.html", "class_istoper" ],
     [ "Istots", "class_istots.html", "class_istots" ],
     [ "Kaf", "class_kaf.html", "class_kaf" ],
-    [ "Lista", "class_lista.html", "class_lista" ]
+    [ "Lista", "class_lista.html", "class_lista" ],
+    [ "test_lista", "classtest__lista.html", "classtest__lista" ]
 ];

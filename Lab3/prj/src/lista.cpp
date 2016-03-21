@@ -21,6 +21,7 @@ using namespace std;
 
 /*!
  *\brief Konstruktor bezparametryczny dla obiektow klasy Lista.
+ * Ustawia wskazniki listy na NULL;
  */
 Lista:: Lista()
 {
@@ -28,8 +29,11 @@ Lista:: Lista()
   tyl=NULL;
 }
 
-//Konstruktor parametryczny, twrzy kafelek i sprawia, ze oba wskazniki klasy
-//Lista wskazuja na niego
+/*!
+ *\brief Konstruktor parametryczny dla obiektow klasy Lista
+ * Twrzy kafelek i sprawia, ze oba wskazniki klasy Lista wskazuja na niego.
+ * \param[in] elem - slowo, ktore ma zostac wpisane do kafelka.
+ */
 Lista:: Lista(string elem)
 {
   Kaf* kafelek=new Kaf(); //tworze nowy kafelek
@@ -41,7 +45,12 @@ Lista:: Lista(string elem)
   nr++;
 }
 
-//Metoda zwraca true, gdy lista pusta, false, gdy cos na niej jest
+/*!
+ *\brief Metoda empty dla obiektow klasy Lista
+ * Metoda sprawdza, czy wskazniki klasy Lista nastawione sa na NULL.
+ * Gdy tak- lista pusta, gdy nie-na liscie znajduje sie element.
+ * \return Zwraca true, gdy lista pusta w przeciwnym razie false.
+ */
 bool Lista:: empty()
 {
   if(przod==NULL && tyl==NULL)
@@ -56,13 +65,27 @@ bool Lista:: empty()
     }
 }
 
-string Lista:: get(int indeks)
+/*!
+ *\brief Metoda get dla obiektow klasy Lista
+ * Metoda sprawdza co znajduje sie w miejscu pola wartosc.
+ * \return Zwraca wartosc elementu, ktory znajduje sie na przodie listy.
+ */
+string Lista:: get()
   {
-    return przod->wartosc;
+    if(!empty())
+      return przod->wartosc;
+    else
+      return "/n";
   }
 
-
-//Zwraca rozmiar listy 
+/*!
+ *\brief Metoda size dla obiektow klasy Lista
+ * Metoda tworzy zmienna pomocnicza bufo, ktora wskazuje na to samo
+ * miejsce co poczatek listy a nastepnie poprzez wskaznik na poprzedni
+ * element przesuwa sie az do konca listy, przy okazji zwiekszajac
+ * n. Gdy napotka NULL oznacza to, ze zmienna dotarla do konca listy.
+ * \return n - Zwraca rozmiar listy.
+ */
 int Lista:: size()
 {
   int n=0;
@@ -71,7 +94,6 @@ int Lista:: size()
     {
       while(bufo!=NULL)
 	{
-	  cout << bufo->wartosc << endl;
 	  bufo=bufo->prev;
 	  n++;
 	}
@@ -80,12 +102,23 @@ int Lista:: size()
   return n;
 }
 
-
+/*!
+ *\brief Metoda push_front dla obiektow klasy Lista
+ * Wpisuje ona nowy element na przod listy.
+ * Jezeli lista jest pusta, zostaja podjete dzialania analogiczne do tych
+ * konstruktorze parametrycznym.
+ * Jezeli na liscie znajduje sie element wskaznik prev nowego elementu
+ * zaczyna wskazywac na ten same element na ktory wskazywal przod, 
+ * nastepnie wskaznik next dotychczasowego pierwszego elementu zaczyna
+ * wskazywac na nowy element. Przesuwam wskaznik przod na nowy element,
+ * wpisuje slowo w pole wartosc
+ * \param[in] element - Slowo, ktore ma zostac wpisane w nowy element.
+ */
 void Lista::push_front(string element)
 {
   Kaf* kafelek2=new Kaf();
   kafelek2->next=NULL;
-  if(empty()) //jezeli pusta - to samo co w konstruktorze param.
+  if(empty()) 
     { 
       kafelek2->prev=NULL; 
       kafelek2->wartosc=element;
@@ -103,11 +136,23 @@ void Lista::push_front(string element)
 }
 
 
+/*!
+ *\brief Metoda push_back dla obiektow klasy Lista
+ * Wpisuje ona nowy element na tyl listy.
+ * Jezeli lista jest pusta, zostaja podjete dzialania analogiczne do tych
+ * przy konstruktorze parametrycznym.
+ * Jezeli na liscie znajduje sie element wskaznik next nowego elementu
+ * zaczyna wskazywac na ten same element na ktory wskazywal tyl, 
+ * nastepnie wskaznik prev dotychczasowego ostatniego elementu zaczyna
+ * wskazywac na nowy element. Przesuwam wskaznik tyl na nowy element,
+ * wpisuje slowo w pole wartosc.
+ * \param[in] element - Slowo, ktore ma zostac wpisane w nowy element.
+ */
 void Lista::push_back(string element)
 {
   Kaf* kafelek2=new Kaf();
   kafelek2->prev=NULL; 
-  if(empty()) //jezeli pusta - to samo co w konstruktorze param.
+  if(empty()) 
     {
       kafelek2->next=NULL; 
       kafelek2->wartosc=element;
@@ -125,11 +170,24 @@ void Lista::push_back(string element)
   nr++;
 }
 
-
+/*!
+ *\brief Metoda push_ind dla obiektow klasy Lista
+ * Wpisuje ona nowy element w dowolne miejsce na liscie.
+ * Jezeli lista jest pusta, zostaja podjete dzialania analogiczne do tych
+ * konstruktorze parametrycznym.
+ * Jezeli indeks przewyzsza rozmiar tablicy(ktory jest zapisany w zmiennej nr)
+ * wtedy podejmowane jest dzialanie analogiczne do tego w push_front
+ * Jezeli indeks jest mniejszy niz rozmiar tablicy
+ * cofam sie dzieki zmiennej pomocnicznej tmp do odpowiedniego miejscs
+ * i zmieniam wartosc pola element.
+ * Jezeli na liscie znajduje sie element wskaznik 
+ * \param[in] element - Slowo, ktore ma zostac wpisane w nowy element.
+ * \param[in] ind - Miejsce, w ktore ma zostac wpisany nowy element.
+ */
 void Lista::push_ind(string element,int indeks)
 {
   Kaf* kafelek2=new Kaf();
-  if(empty()) //jezeli pusta - to samo co w konstruktorze param.
+  if(empty()) 
     {
       kafelek2->next=NULL; 
       kafelek2->prev=NULL; 
@@ -167,7 +225,20 @@ void Lista::push_ind(string element,int indeks)
     }
 }
 
-//Sciaganie elementu z gory listy
+/*!
+ *\brief Metoda pop_front dla obiektow klasy Lista
+ * Sciaga ona element z przodu listy.
+ * Jezeli lista jest pusta, wyswietlany jest odpowiedni komunikat.
+ * Jezeli na liscie znajduje sie element wprowadzam zmienna pomocnicza tmp
+ * nastepnie sciagam wartosc kafelka do zmienneja.
+ * Jezeli element jest jedyny na liscie, wtedy sprawiam, ze lista jest pusta,
+ * nastawiajac przod i tyl na NULL, potem kasujac tmp.
+ * Jezeli nie jest to jedyny element na liscie, to przesuwam przod na poprzedni 
+ * element, nastepnie kasuje tmp.
+ * Za kazdym razem zmniejszam wartosc nr, by nastawic odpowiedni rozmiar
+ * listy.
+ * \return a - Slowo, ktore znajdowalo sie na sciagnietym elemencie.
+ */
 string Lista:: pop_front()
 {
   if(empty()) // Jezeli lista pusta
@@ -200,8 +271,20 @@ string Lista:: pop_front()
     }
 }
 
-  
-  
+/*!
+ *\brief Metoda pop_back dla obiektow klasy Lista
+ * Sciaga ona element z tylu listy.
+ * Jezeli lista jest pusta, wyswietlany jest odpowiedni komunikat.
+ * Jezeli na liscie znajduje sie element wprowadzam zmienna pomocnicza tmp
+ * nastepnie sciagam wartosc kafelka do zmienneja.
+ * Jezeli element jest jedyny na liscie, wtedy sprawiam, ze lista jest pusta,
+ * nastawiajac przod i tyl na NULL, potem kasujac tmp.
+ * Jezeli nie jest to jedyny element na liscie, to przesuwam tyl na nastepny 
+ * element, nastepnie kasuje tmp.
+ * Za kazdym razem zmniejszam wartosc nr, by nastawic odpowiedni rozmiar
+ * listy.
+ * \return a - Slowo, ktore znajdowalo sie na sciagnietym elemencie.
+ */  
 string Lista:: pop_back()
 {
   if(empty()) // Jezeli lista pusta
@@ -235,8 +318,11 @@ string Lista:: pop_back()
     }
 }
 
-
-void Lista:: erase(int start,int end)
+/*!
+ *\brief Metoda erase dla obiektow klasy Lista
+ * Sciagac bedzie ona wybrana ilosc elementow z wybranego miejsca na liscie.
+ */
+void Lista:: erase(int start,int end) //niedokonczona!!!!!
 {
     if(empty()) // Jezeli lista pusta
       {
@@ -272,7 +358,13 @@ void Lista:: erase(int start,int end)
 }
     
 
-
+/*!
+ * \brief Destruktor elementow klasy lista.
+ * Usuwa obiekty klasy Lista po zakonczeniu pracy programu/funkcji.
+ * Przechodzi po kazdym z elementow listy i kasuje je.
+ * Gdy ilosc elementow jest rowna jeden, kasuje go a nastepnie nastawiam
+ * wszystkie wskazniki na NULL.
+ */
 Lista:: ~Lista()
 {
   if(!empty())
@@ -285,7 +377,6 @@ Lista:: ~Lista()
 	  tmp->next=NULL; 
 	  tmp->prev=NULL;
 	  delete tmp; //zwolnienie pamieci
-	  nr--; //zmniejszenie rozmiaru listy 
 	}
       Kaf* tmp=przod;
       tyl=NULL;
