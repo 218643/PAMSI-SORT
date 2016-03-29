@@ -8,9 +8,10 @@
 
 using namespace std;
 
+#include "Lista.hh"
 #include "Stos.hh"
+#include "Kolejka.hh"
 #include "tablica.hh"
-#include "test_lista.hh"
 #include "BubbleSort.hh"
 
 
@@ -18,19 +19,9 @@ using namespace std;
 //Argv[] - tablica, zawiera nazwy wpisacnych komend, plikow.
 int main(int Argc, char* Argv[])
 {
-  Tablica tab(10000);
-  int i=0;
-  for(i=0;i<10000;i++)
-    {
-      tab.dopiszx2(i,rand() % 100);
-    }
-  tab.dotnij(i);
-
-  //tab.wyswietl();
-
-  BubbleSort(tab,i);
-
-  //tab.wyswietl();
+  Stos sts;
+  Lista lst;
+  Tablica tab;
 
 
   // test_lista test;  

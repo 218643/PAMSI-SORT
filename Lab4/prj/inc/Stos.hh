@@ -2,8 +2,9 @@
 
 class Elem
 {
-  Elem* stos;
+  Elem* prev;
   string wartosc;
+  friend class Stos;
 };
 
 class Stos: public Istos
@@ -12,11 +13,12 @@ protected:
   Elem* przod;
 public:
   Stos();
-  Stos(int rozm);
+  Stos(string element);
   virtual bool empty();
-  virtual bool push(string element);
+  virtual void push(string element);
   virtual string pop();
-  virtual bool erase(int end);
+  virtual void erase(int end);
   virtual string top();
   virtual int size();
+  ~Stos();
 };

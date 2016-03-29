@@ -6,7 +6,7 @@ public:
   virtual bool empty()=0;  
   
   //Wrzucanie elementu na koniec kolejki
-  virtual bool push(string element)=0;
+  virtual void push(string element)=0;
   
   //Sciaganie elementu z poczatku kolejki.
   virtual string pop()=0;

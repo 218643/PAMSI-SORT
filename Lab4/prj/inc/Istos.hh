@@ -6,13 +6,13 @@ public:
   virtual bool empty()=0;  
   
   //Wrzucanie elementu na stos
-  virtual bool push(string element)=0;
+  virtual void push(string element)=0;
   
   //Sciaganie elementu ze stosu
   virtual string pop()=0;
     
   //Usuwanie elementow od szczytu stosu do end, przy traceniu ich wartosci
-  virtual bool erase(int end);
+  virtual void erase(int end)=0;
 
   //Zwraca wartosc ze szczytu stosu, bez jej usuwania.
   virtual string top()=0;
