@@ -21,8 +21,8 @@ int main(int Argc, char* Argv[])
 {
   Stos sts;
   Lista lst;
+  Kolejka Kol;
   Tablica tab;
-
 
   // test_lista test;  
   //test.run(Argc,Argv);

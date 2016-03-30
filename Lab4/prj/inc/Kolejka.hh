@@ -3,6 +3,7 @@
 class Ele
 {
   Ele* prev;
+  Ele* next;
   string wartosc;
   friend class Kolejka;
 };
@@ -10,7 +11,8 @@ class Ele
 class Kolejka: public Ikolejka
 {
 protected:
-
+  Ele* przod;
+  Ele* tyl;
 public:
   Kolejka();
   Kolejka(string elem);
