@@ -55,12 +55,10 @@ bool Lista:: empty()
 {
   if(przod==NULL && tyl==NULL)
     {
-      //cerr << "Lista pusta." << endl;
       return true;
     }
   else
     {
-      //cerr << "Na liscie znajduja sie elementy" << endl;
       return false;
     }
 }
@@ -75,7 +73,7 @@ string Lista:: get()
     if(!empty())
       return przod->wartosc;
     else
-      return "/n";
+      return "0";
   }
 
 /*!
