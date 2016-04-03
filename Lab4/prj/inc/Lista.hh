@@ -88,13 +88,6 @@ public:
   virtual string pop_back();
 
   /*!
-   *\brief Metoda erase dla obiektow klasy Lista.
-   * Usuwanie elementow listy od start do end, przy traceniu ich wartosci.
-   * (metoda jeszcze niedopracowana)
-   */
-  virtual void erase(int start,int end);
-
-  /*!
    *\brief Destruktor dla obiektow klasy Lista.
    */
   ~Lista();

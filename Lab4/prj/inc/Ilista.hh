@@ -14,9 +14,6 @@ public:
   //Wrzucanie elementu na odpowiednie miejsce na liscie
   virtual void push_ind(string element,int indeks)=0;
   
-  //Usuwanie elementow listy od start do end, przy traceniu ich wartosci.
-  virtual void erase(int start,int end)=0;
-  
   //Usuwanie jednego elementu z przodu listy,zwraca jeg wartosc.
   virtual string pop_front()=0;
   

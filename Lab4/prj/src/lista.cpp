@@ -116,10 +116,10 @@ void Lista::push_front(string element)
 {
   Kaf* kafelek2=new Kaf();
   kafelek2->next=NULL;
+  kafelek2->wartosc=element;
   if(empty()) 
     { 
       kafelek2->prev=NULL; 
-      kafelek2->wartosc=element;
       przod=kafelek2;     
       tyl=kafelek2;
     }
@@ -128,7 +128,6 @@ void Lista::push_front(string element)
       kafelek2->prev=przod;
       przod->next=kafelek2;
       przod=kafelek2;
-      kafelek2->wartosc=element;
     }
   nr++;  
 }
@@ -149,11 +148,11 @@ void Lista::push_front(string element)
 void Lista::push_back(string element)
 {
   Kaf* kafelek2=new Kaf();
-  kafelek2->prev=NULL; 
+  kafelek2->prev=NULL;
+  kafelek2->wartosc=element; 
   if(empty()) 
     {
       kafelek2->next=NULL; 
-      kafelek2->wartosc=element;
       przod=kafelek2;     
       tyl=kafelek2;
       nr++;  
@@ -163,7 +162,6 @@ void Lista::push_back(string element)
       kafelek2->next=tyl;
       tyl->prev=kafelek2;
       tyl=kafelek2;
-      kafelek2->wartosc=element;
     }
   nr++;
 }
@@ -242,7 +240,7 @@ string Lista:: pop_front()
   if(empty()) // Jezeli lista pusta
     {
       cerr <<"Nie ma czego usuwac." << endl;
-      return "Nie ma czego usuwac.";
+      return "0";
     }
   else
     {
@@ -288,7 +286,7 @@ string Lista:: pop_back()
   if(empty()) // Jezeli lista pusta
     {
       cerr << "Nie ma czego usuwac" <<endl;
-      return "Nie ma czego usuwac.";
+      return "0";
     }
   else
     {
@@ -301,7 +299,6 @@ string Lista:: pop_back()
 	  tmp->next=NULL; 
 	  tmp->prev=NULL;
 	  delete tmp;
-	  cerr << "Usunieto ostatni element" << endl;
 	}
       else //jezeli wiecej elementow na tablicy
 	{
@@ -315,46 +312,6 @@ string Lista:: pop_back()
       return a;
     }
 }
-
-/*!
- *\brief Metoda erase dla obiektow klasy Lista
- * Sciagac bedzie ona wybrana ilosc elementow z wybranego miejsca na liscie.
- */
-void Lista:: erase(int start,int end) //niedokonczona!!!!!
-{
-    if(empty()) // Jezeli lista pusta
-      {
-	cerr <<"Nie ma czego usuwac." << endl;
-      }
-    else
-      {
-	Kaf* tmp=tyl;
-	if(start==end) //usuwanie jednego elementu
-	  {
-	    if(end==nr) //sytuacja skrajna, usuwanie elementu z konca tablicy
-	      {
-		
-	      }
-	    else if(end==0) //usuwanie elem z 
-	      {
-
-	      }
-	    else
-	      {
-		for(int i = 0; i < end ;i++)
-		  {
-		    tyl=tyl->next;
-		  }
-		tyl->prev->next=tyl->next;
-		tyl->next->prev=tyl->prev;
-		delete tyl;
-		tyl=tmp;
-		nr--;
-	      }
-	  }
-      }
-}
-    
 
 /*!
  * \brief Destruktor elementow klasy lista.
