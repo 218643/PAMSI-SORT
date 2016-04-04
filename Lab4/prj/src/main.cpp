@@ -24,7 +24,7 @@ int main(int Argc, char* Argv[])
   Kolejka Kol;
   Tablica tab;
 
-  // test_lista test;  
+  test_lista test;
   //test.run(Argc,Argv);
   //test.wyswietl_wynik();
 }

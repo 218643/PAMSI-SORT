@@ -5,6 +5,7 @@
 #include <fstream>
 #include <iomanip>
 #include <iostream>
+#include <sstream>
 
 using namespace std;
 
@@ -15,7 +16,7 @@ using namespace std;
  *\brief Definicje funkcji oraz metod klasy test_lista.
  * Plik ten zawierqa definicje funkcji oraz metod
  * dla obiektow klasy test_lista. Sa one umieszczone tutaj
- * a nie w pliku naglowkowym aby zwiekszyc przejrzystosc 
+ * a nie w pliku naglowkowym aby zwiekszyc przejrzystosc
  * kodu.
  */
 
@@ -33,7 +34,7 @@ test_lista::test_lista()
 /*!
  *\brief Metoda start.
  * Jest to jedna z metod, ktora implementuje metode czysto wirtualna
- * interfejsu Istoper. Uruchamia zegar i zapisuje wynik do 
+ * interfejsu Istoper. Uruchamia zegar i zapisuje wynik do
  * pola listy sta.
  */
 void test_lista:: start()
@@ -44,7 +45,7 @@ void test_lista:: start()
 /*!
  *\brief Metoda stop.
  * Jest to jedna z metod, ktora implementuje metode czysto wirtualna
- * interfejsu Istoper. Uruchamia zegar i zapisuje wynik do 
+ * interfejsu Istoper. Uruchamia zegar i zapisuje wynik do
  * pola listy end.
  */
 void test_lista:: stop()
@@ -75,7 +76,7 @@ void test_lista::wyswietl_wynik()
 
 /*!
  *\brief Metoda losuj_slowo.
- * Metoda losuje slowo z listy. 
+ * Metoda losuje slowo z listy.
  * Na poczatku ustawiam zarodek czasu, by za kazdym razem losowana
  * byla inna wartosc. Nastepnie definiuje zmienna pomocnicza, ktora
  * bedzie poruszac sie po  liscie. Nastepnie losuje liczbe z przedzialu
@@ -83,9 +84,9 @@ void test_lista::wyswietl_wynik()
  * miejsca, pobieram slowo i zwracam jego wartosc.
  *\return slowo - wraca wyloswane slowo.
  */
-string test_lista:: losuj_slowo()
+int test_lista:: losuj_slowo()
 {
-  srand (time(NULL));   //ustawienie zarodka, by przy kazdym uruchom prog       
+  srand (time(NULL));   //ustawienie zarodka, by przy kazdym uruchom prog
                         //losowane byly inne liczby
   Kaf* tmp=this->przod;
   int rn= rand() % (siz+1); //Losowanie elementu, ktory ma zostac wyszukany
@@ -93,31 +94,31 @@ string test_lista:: losuj_slowo()
     {
       tmp=tmp->prev;
     }
-  cout <<"Los:  "<< tmp->wartosc << endl;
-  return tmp->wartosc;
+  cout <<"Los:  "<< rn << endl;
+  return rn;
 }
 
 /*!
  *\brief Metoda szukaj.
- * Metoda losuje slowo z listy. 
+ * Metoda losuje slowo z listy.
  * Odpalam stoper, sciagam elementy, do momentu, gdy znajde slowowo,
  * ktore szukam, zatrzymuje stoper.
  *\param[in] los - jako argument przyjmuje wylosowane slowo.
  */
-void test_lista::szukaj(string los)
+/*void test_lista::szukaj(int los)
 {
   start();
-  while(get()!=los)
+  /*while(get()!=los)
     {
       pop_front();
     }
   stop();
-}
+}*/
 
 /*!
  *\brief Metoda run.
  * Jest to jedna z metod implementujaca metode czysto wirtualna
- * interfejsu Irunnable. 
+ * interfejsu Irunnable.
  * Jezeli podano odpowiednia ilosc plikow na wejscie, otwieramny
  * jest strumien plikowy i elementy z tego strumienia wpisywane sa
  * na liste. Nastepnie zamykany jest uchwyt do pliku i uruchomione
@@ -136,7 +137,7 @@ bool test_lista:: run(int Argc,char* Argv[])
   else
     {
       //***************Obsluga pliku***************//
-      string elem;
+    int elem;
       fstream plik; //zmienna pozwalajaca otworzyc strumien plikowy
       plik.open(Argv[1],ios::in); //otwarcie strumienia plikowego
       if(plik.good()) //jezeli udalo sie otworzyc plik
@@ -144,15 +145,32 @@ bool test_lista:: run(int Argc,char* Argv[])
 	  while(!plik.eof())
 	    {
 	      plik >> elem;
-	      push_front(elem);
+	      //rzutowanie
+	      std::ostringstream ss;
+	      ss << elem;
+	      string str = ss.str();
+
+	      //push_front(str);
+
 	    }
-	  pop_front();
+	  cout<< pop_front()<<endl;
 	}
+          std::ostringstream ss;
+	      ss << losuj_slowo();
+	      string str = ss.str();
+
+	for (int i = 0; i < elem ; i++){
+	push_front(str);
+	}
+
+      cout << push_front()<<endl;
+
       plik.close(); //zamkniecie strumienia plikowego
-    
-      siz=size(); //ustawienie rozmiaru problemu  
-      
-      szukaj(losuj_slowo());	  
+
+      siz=size(); //ustawienie rozmiaru problemu
+
+
+      //szukaj(losuj_slowo());
     }
   return true;
   //*********************************//

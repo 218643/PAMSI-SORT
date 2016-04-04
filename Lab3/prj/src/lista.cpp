@@ -15,7 +15,7 @@ using namespace std;
  *\brief Definicje funkcji oraz metod klasy Lista.
  * Plik ten zawierqa definicje funkcji oraz metod
  * dla obiektow klasy Lista. Sa one umieszczone tutaj
- * a nie w pliku naglowkowym aby zwiekszyc przejrzystosc 
+ * a nie w pliku naglowkowym aby zwiekszyc przejrzystosc
  * kodu.
  */
 
@@ -108,7 +108,7 @@ int Lista:: size()
  * Jezeli lista jest pusta, zostaja podjete dzialania analogiczne do tych
  * konstruktorze parametrycznym.
  * Jezeli na liscie znajduje sie element wskaznik prev nowego elementu
- * zaczyna wskazywac na ten same element na ktory wskazywal przod, 
+ * zaczyna wskazywac na ten same element na ktory wskazywal przod,
  * nastepnie wskaznik next dotychczasowego pierwszego elementu zaczyna
  * wskazywac na nowy element. Przesuwam wskaznik przod na nowy element,
  * wpisuje slowo w pole wartosc
@@ -118,11 +118,11 @@ void Lista::push_front(string element)
 {
   Kaf* kafelek2=new Kaf();
   kafelek2->next=NULL;
-  if(empty()) 
-    { 
-      kafelek2->prev=NULL; 
+  if(empty())
+    {
+      kafelek2->prev=NULL;
       kafelek2->wartosc=element;
-      przod=kafelek2;     
+      przod=kafelek2;
       tyl=kafelek2;
     }
   else
@@ -132,7 +132,7 @@ void Lista::push_front(string element)
       przod=kafelek2;
       kafelek2->wartosc=element;
     }
-  nr++;  
+  nr++;
 }
 
 
@@ -142,7 +142,7 @@ void Lista::push_front(string element)
  * Jezeli lista jest pusta, zostaja podjete dzialania analogiczne do tych
  * przy konstruktorze parametrycznym.
  * Jezeli na liscie znajduje sie element wskaznik next nowego elementu
- * zaczyna wskazywac na ten same element na ktory wskazywal tyl, 
+ * zaczyna wskazywac na ten same element na ktory wskazywal tyl,
  * nastepnie wskaznik prev dotychczasowego ostatniego elementu zaczyna
  * wskazywac na nowy element. Przesuwam wskaznik tyl na nowy element,
  * wpisuje slowo w pole wartosc.
@@ -151,14 +151,14 @@ void Lista::push_front(string element)
 void Lista::push_back(string element)
 {
   Kaf* kafelek2=new Kaf();
-  kafelek2->prev=NULL; 
-  if(empty()) 
+  kafelek2->prev=NULL;
+  if(empty())
     {
-      kafelek2->next=NULL; 
+      kafelek2->next=NULL;
       kafelek2->wartosc=element;
-      przod=kafelek2;     
+      przod=kafelek2;
       tyl=kafelek2;
-      nr++;  
+      nr++;
     }
   else
     {
@@ -180,21 +180,21 @@ void Lista::push_back(string element)
  * Jezeli indeks jest mniejszy niz rozmiar tablicy
  * cofam sie dzieki zmiennej pomocnicznej tmp do odpowiedniego miejscs
  * i zmieniam wartosc pola element.
- * Jezeli na liscie znajduje sie element wskaznik 
+ * Jezeli na liscie znajduje sie element wskaznik
  * \param[in] element - Slowo, ktore ma zostac wpisane w nowy element.
  * \param[in] ind - Miejsce, w ktore ma zostac wpisany nowy element.
  */
 void Lista::push_ind(string element,int indeks)
 {
   Kaf* kafelek2=new Kaf();
-  if(empty()) 
+  if(empty())
     {
-      kafelek2->next=NULL; 
-      kafelek2->prev=NULL; 
+      kafelek2->next=NULL;
+      kafelek2->prev=NULL;
       kafelek2->wartosc=element;
-      przod=kafelek2;     
+      przod=kafelek2;
       tyl=kafelek2;
-      nr++;  
+      nr++;
     }
   else
     {
@@ -203,7 +203,7 @@ void Lista::push_ind(string element,int indeks)
 	przod->next=kafelek2;
 	kafelek2->prev=przod;
 	cout<<"Nr:  " <<nr<<endl;
-	przod=kafelek2; 
+	przod=kafelek2;
 	kafelek2->wartosc=element;
 	nr++;
       }
@@ -218,7 +218,7 @@ void Lista::push_ind(string element,int indeks)
 		{
 		  tyl=tyl->next;
 		}
-	      tyl->wartosc=element; 
+	      tyl->wartosc=element;
 	      tyl=tyl_tmp;
 	    }
 	}
@@ -233,7 +233,7 @@ void Lista::push_ind(string element,int indeks)
  * nastepnie sciagam wartosc kafelka do zmienneja.
  * Jezeli element jest jedyny na liscie, wtedy sprawiam, ze lista jest pusta,
  * nastawiajac przod i tyl na NULL, potem kasujac tmp.
- * Jezeli nie jest to jedyny element na liscie, to przesuwam przod na poprzedni 
+ * Jezeli nie jest to jedyny element na liscie, to przesuwam przod na poprzedni
  * element, nastepnie kasuje tmp.
  * Za kazdym razem zmniejszam wartosc nr, by nastawic odpowiedni rozmiar
  * listy.
@@ -254,7 +254,7 @@ string Lista:: pop_front()
 	{
 	  przod=NULL;
 	  tyl=NULL;
-	  tmp->next=NULL; 
+	  tmp->next=NULL;
 	  tmp->prev=NULL;
 	  delete tmp;
 	}
@@ -262,10 +262,10 @@ string Lista:: pop_front()
 	{
 	  przod=przod->prev; //cofniecie wskaznika z pierwszego kaf na drugi kaf
 	  przod->next=NULL; //"odciecie" polaczenia z popowanym kafelkiem
-	  tmp->next=NULL; 
+	  tmp->next=NULL;
 	  tmp->prev=NULL;
 	  delete tmp; //zwolnienie pamieci
-	  nr--; //zmniejszenie rozmiaru listy 
+	  nr--; //zmniejszenie rozmiaru listy
 	}
       return a;
     }
@@ -279,12 +279,12 @@ string Lista:: pop_front()
  * nastepnie sciagam wartosc kafelka do zmienneja.
  * Jezeli element jest jedyny na liscie, wtedy sprawiam, ze lista jest pusta,
  * nastawiajac przod i tyl na NULL, potem kasujac tmp.
- * Jezeli nie jest to jedyny element na liscie, to przesuwam tyl na nastepny 
+ * Jezeli nie jest to jedyny element na liscie, to przesuwam tyl na nastepny
  * element, nastepnie kasuje tmp.
  * Za kazdym razem zmniejszam wartosc nr, by nastawic odpowiedni rozmiar
  * listy.
  * \return a - Slowo, ktore znajdowalo sie na sciagnietym elemencie.
- */  
+ */
 string Lista:: pop_back()
 {
   if(empty()) // Jezeli lista pusta
@@ -300,7 +300,7 @@ string Lista:: pop_back()
 	{
 	  tyl=NULL;
 	  przod=NULL;
-	  tmp->next=NULL; 
+	  tmp->next=NULL;
 	  tmp->prev=NULL;
 	  delete tmp;
 	  cerr << "Usunieto ostatni element" << endl;
@@ -335,9 +335,9 @@ void Lista:: erase(int start,int end) //niedokonczona!!!!!
 	  {
 	    if(end==nr) //sytuacja skrajna, usuwanie elementu z konca tablicy
 	      {
-		
+
 	      }
-	    else if(end==0) //usuwanie elem z 
+	    else if(end==0) //usuwanie elem z
 	      {
 
 	      }
@@ -356,7 +356,7 @@ void Lista:: erase(int start,int end) //niedokonczona!!!!!
 	  }
       }
 }
-    
+
 
 /*!
  * \brief Destruktor elementow klasy lista.
@@ -374,14 +374,14 @@ Lista:: ~Lista()
 	  Kaf* tmp=przod;
 	  przod=przod->prev;
 	  przod->next=NULL;
-	  tmp->next=NULL; 
+	  tmp->next=NULL;
 	  tmp->prev=NULL;
 	  delete tmp; //zwolnienie pamieci
 	}
       Kaf* tmp=przod;
       tyl=NULL;
       przod=NULL;
-      tmp->next=NULL; 
+      tmp->next=NULL;
       tmp->prev=NULL;
       delete tmp;
       delete przod;

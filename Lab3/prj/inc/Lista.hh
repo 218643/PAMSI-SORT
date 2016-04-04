@@ -5,7 +5,7 @@
  * Plik ten zawiera definicje klasy Lista,
  * ktorej obiekty implementuja interfejs Ilista, oraz klasy Kaf,
  * ktora tworzy poszczegolne elementy listy.
- * Obiekty klasy typu Lista sklada sie z dwoch wskaznikow 
+ * Obiekty klasy typu Lista sklada sie z dwoch wskaznikow
  * typu Kaf, ktore wskazuja na poczatek i koniec listy,
  * oraz z pola nr, ktore zawiera w sobie informacje o rozmiarze tablicy.
  */
@@ -33,7 +33,7 @@ public:
    *\brief Konstruktor bezparametryczny dla obiektow klasy Lista.
    */
   Lista();
-  
+
   /*!
    *\brief Konstruktor parametryczny dla obiektow klasy Lista.
    */
@@ -43,47 +43,47 @@ public:
    *\brief Metoda empty dla obiekyw klasy Lista.
    * Sprawdza czy na liscie znajduja sie jakies elementy.
    */
-  virtual bool empty();  
+  virtual bool empty();
 
   /*!
    *\brief Metoda get dla obiektow klasy Lista.
-   * Zwraca wartosc z podanego miejsca na liscie, nie usuwajac elementu. 
+   * Zwraca wartosc z podanego miejsca na liscie, nie usuwajac elementu.
    */
   virtual string get();
 
   /*!
    *\brief Metoda size dla obiektow klasy Lista.
-   * Zwraca ilosc elementow na liscie. 
+   * Zwraca ilosc elementow na liscie.
    */
   virtual int size();
 
   /*!
    *\brief Metoda push_front dla obiektow klasy Lista.
-   * Dodaje element na poczatek listy. 
+   * Dodaje element na poczatek listy.
    */
   virtual void push_front(string element);
 
   /*!
    *\brief Metoda push_back dla obiektow klasy Lista.
-   * Dodaje element na koniec listy. 
+   * Dodaje element na koniec listy.
    */
   virtual void push_back(string element);
 
   /*!
    *\brief Metoda push_ind dla obiektow klasy Lista.
-   * Dodaje element we wskazane miejsce na liscie. 
+   * Dodaje element we wskazane miejsce na liscie.
    */
-  virtual void push_ind(string element,int indeks);
+  virtual void push_ind(int element,int indeks);
 
   /*!
    *\brief Metoda pop_front dla obiektow klasy Lista.
-   * Usuwana jeden element z przodu listy,zwraca jeg wartosc. 
+   * Usuwana jeden element z przodu listy,zwraca jeg wartosc.
    */
   virtual string pop_front();
 
   /*!
    *\brief Metoda pop_front dla obiektow klasy Lista.
-   * Usuwana jeden element z tylu listy,zwraca jeg wartosc. 
+   * Usuwana jeden element z tylu listy,zwraca jeg wartosc.
    */
   virtual string pop_back();
 
