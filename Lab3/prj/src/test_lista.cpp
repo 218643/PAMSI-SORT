@@ -5,7 +5,6 @@
 #include <fstream>
 #include <iomanip>
 #include <iostream>
-#include <sstream>
 
 using namespace std;
 
@@ -72,6 +71,7 @@ long test_lista:: get_time()
 void test_lista::wyswietl_wynik()
 {
   cout << get_time() << endl;
+
 }
 
 /*!
@@ -84,7 +84,7 @@ void test_lista::wyswietl_wynik()
  * miejsca, pobieram slowo i zwracam jego wartosc.
  *\return slowo - wraca wyloswane slowo.
  */
-int test_lista:: losuj_slowo()
+string test_lista:: losuj_slowo()
 {
   srand (time(NULL));   //ustawienie zarodka, by przy kazdym uruchom prog
                         //losowane byly inne liczby
@@ -94,8 +94,8 @@ int test_lista:: losuj_slowo()
     {
       tmp=tmp->prev;
     }
-  cout <<"Los:  "<< rn << endl;
-  return rn;
+  cout <<"Los:  "<< tmp->wartosc << endl;
+  return tmp->wartosc;
 }
 
 /*!
@@ -105,15 +105,138 @@ int test_lista:: losuj_slowo()
  * ktore szukam, zatrzymuje stoper.
  *\param[in] los - jako argument przyjmuje wylosowane slowo.
  */
-/*void test_lista::szukaj(int los)
+void test_lista::szukaj(string los)
 {
   start();
-  /*while(get()!=los)
+  while(get()!=los)
     {
       pop_front();
     }
   stop();
+}
+
+void test_lista::generateINT(int gen)
+{
+    int a, b;
+    int x;
+    std::fstream plik;
+
+
+    a = 0;
+    b = 900000;
+    plik.open( "tekst.txt", std::ios::in | std::ios::out );
+    if( plik.good() == true )
+    {
+        for (int i = 0; i< gen; i++)
+        {
+            x = a+(rand() % (b-a+1));
+            plik << x << endl;
+        }
+    }
+    plik.close();
+
+}
+
+
+// zapisdotabeli kod metody
+void test_lista::zapisDoTabeli()
+{
+  fstream plik;
+    plik.open("tekst.txt", std::ios::in | std::ios::out);
+    if(plik.good())
+	{
+        //ind =0;
+        while(!plik.eof())
+	    {
+	      plik >> tab[ind];
+	      ind++;
+	    }
+
+	}
+	plik.close();
+}
+
+/*void test_lista::zapisdoPliku()
+{
+    ofstream plik;
+  plik.open( "posortowane.txt", std::ios::in | std::ios::out );
+    if( plik.good() == true )
+    {
+            plik << tab[ind] << endl;
+        }
+
+    plik.close();
 }*/
+void test_lista::zapisdoPliku(std::string const& nazwaPliku)
+{
+  std::ofstream strumienNaPlik (nazwaPliku, std::ios::app); // parametr ios::app powoduje to, ze do pliku bedziemy dopisywac linijki a nie nadpisywac
+    strumienNaPlik << tab[ind] << std::endl;
+}
+
+
+
+/**************SO RT OW AN IA ********************/
+void test_lista::quick_sort(int tab[], int left, int right)
+{
+    int i = left;
+    int j = right;
+    int x = tab[( left + right ) / 2 ];
+    do
+    {
+        while( tab[ i ] < x )
+        {
+             i++;
+             }
+
+        while( tab[ j ] > x )
+        {
+             j--;
+             }
+        if( i <= j )
+        {
+            swap( tab[ i ], tab[ j ] );
+
+            i++;
+            j--;
+        }
+    } while( i <= j );
+
+    if( left < j ) {quick_sort( tab, left, j );}
+
+    if( right > i ) {quick_sort( tab, i, right );}
+
+}
+
+
+
+void Lista::merge(int pocz, int sr, int kon)
+{
+int i,j,q;
+for (i=pocz; i<=kon; i++) t[i]=tab[i];  // Skopiowanie danych do tablicy pomocniczej
+i=pocz; j=sr+1; q=pocz;                 // Ustawienie wskaźników tablic
+while (i<=sr && j<=kon) {         // Przenoszenie danych z sortowaniem ze zbiorów pomocniczych do tablicy głównej
+if (t[i]<t[j])
+tab[q++]=t[i++];
+else
+tab[q++]=t[j++];
+}
+while (i<=sr) tab[q++]=t[i++]; // Przeniesienie nie skopiowanych danych ze zbioru pierwszego w przypadku, gdy drugi zbiór się skończył
+}
+
+/* Procedura sortowania tab[pocz...kon] */
+void Lista::merge_sort(int pocz, int kon)
+{
+int sr;
+if (pocz<kon) {
+sr=(pocz+kon)/2;
+mergesort(pocz, sr);    // Dzielenie lewej części
+mergesort(sr+1, kon);   // Dzielenie prawej części
+merge(pocz, sr, kon);   // Łączenie części lewej i prawej
+}
+}
+
+
+
 
 /*!
  *\brief Metoda run.
@@ -137,7 +260,7 @@ bool test_lista:: run(int Argc,char* Argv[])
   else
     {
       //***************Obsluga pliku***************//
-    int elem;
+      string elem;
       fstream plik; //zmienna pozwalajaca otworzyc strumien plikowy
       plik.open(Argv[1],ios::in); //otwarcie strumienia plikowego
       if(plik.good()) //jezeli udalo sie otworzyc plik
@@ -145,34 +268,17 @@ bool test_lista:: run(int Argc,char* Argv[])
 	  while(!plik.eof())
 	    {
 	      plik >> elem;
-	      //rzutowanie
-	      std::ostringstream ss;
-	      ss << elem;
-	      string str = ss.str();
-
-	      //push_front(str);
-
+	      push_front(elem);
 	    }
-	  cout<< pop_front()<<endl;
+	  pop_front();
 	}
-          std::ostringstream ss;
-	      ss << losuj_slowo();
-	      string str = ss.str();
-
-	for (int i = 0; i < elem ; i++){
-	push_front(str);
-	}
-
-      cout << push_front()<<endl;
-
       plik.close(); //zamkniecie strumienia plikowego
 
       siz=size(); //ustawienie rozmiaru problemu
 
+      szukaj(losuj_slowo());
 
-      //szukaj(losuj_slowo());
     }
   return true;
   //*********************************//
 }
-

@@ -73,7 +73,7 @@ public:
    *\brief Metoda push_ind dla obiektow klasy Lista.
    * Dodaje element we wskazane miejsce na liscie.
    */
-  virtual void push_ind(int element,int indeks);
+  virtual void push_ind(string element,int indeks);
 
   /*!
    *\brief Metoda pop_front dla obiektow klasy Lista.
