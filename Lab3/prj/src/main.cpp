@@ -21,8 +21,9 @@ int main(int Argc, char* Argv[])
   test.run(Argc,Argv);
   test.zapisDoTabeli();
   test.quick_sort(test.tab,0,20);
-  //test.mergesort(int pocz, int sr, int kon);
+  //test.mergesort(test.tab,0,19);
   test.zapisdoPliku("posortowane.txt");
   test.wyswietl_wynik();
+
 }
 

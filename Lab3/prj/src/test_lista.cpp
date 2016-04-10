@@ -209,32 +209,67 @@ void test_lista::quick_sort(int tab[], int left, int right)
 
 
 
-void Lista::merge(int pocz, int sr, int kon)
+void merge(int tab[], int start, int srodek, int koniec)
 {
-int i,j,q;
-for (i=pocz; i<=kon; i++) t[i]=tab[i];  // Skopiowanie danych do tablicy pomocniczej
-i=pocz; j=sr+1; q=pocz;                 // Ustawienie wskaźników tablic
-while (i<=sr && j<=kon) {         // Przenoszenie danych z sortowaniem ze zbiorów pomocniczych do tablicy głównej
-if (t[i]<t[j])
-tab[q++]=t[i++];
+int *tab_pom = new int[(koniec-start+1)]; // utworzenie tablicy pomocniczej
+int i = start, j = srodek+1, k = 0; // zmienne pomocnicze
+
+while (i <= srodek && j <= koniec)
+{
+if (tab[j] < tab[i])
+{
+tab_pom[k] = tab[j];
+j++;
+}
 else
-tab[q++]=t[j++];
-}
-while (i<=sr) tab[q++]=t[i++]; // Przeniesienie nie skopiowanych danych ze zbioru pierwszego w przypadku, gdy drugi zbiór się skończył
-}
-
-/* Procedura sortowania tab[pocz...kon] */
-void Lista::merge_sort(int pocz, int kon)
 {
-int sr;
-if (pocz<kon) {
-sr=(pocz+kon)/2;
-mergesort(pocz, sr);    // Dzielenie lewej części
-mergesort(sr+1, kon);   // Dzielenie prawej części
-merge(pocz, sr, kon);   // Łączenie części lewej i prawej
+tab_pom[k] = tab[i];
+i++;
+}
+k++;
+}
+
+if (i <= srodek)
+{
+while (i <= srodek)
+{
+tab_pom[k] = tab[i];
+i++;
+k++;
+}
+}
+else
+{
+while (j <= koniec)
+{
+tab_pom[k] = tab[j];
+j++;
+k++;
 }
 }
 
+for (i = 0; i <= koniec-start+1; i++)
+tab[start+i] = tab_pom[i];
+
+cout << endl;
+for (i = start; i <= koniec; i++) // wypisanie posortowanej tablicy
+cout << "tablica[" << i << "] = " << tab[i] << endl;
+}
+
+
+
+void merge_sort(int tab[], int start, int koniec)
+{
+int srodek;
+
+if (start != koniec)
+{
+srodek = (start + koniec)/2;
+merge_sort(tab, start, srodek);
+merge_sort(tab, srodek+1, koniec);
+merge(tab, start, srodek, koniec);
+}
+}
 
 
 
