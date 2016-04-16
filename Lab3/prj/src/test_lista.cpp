@@ -5,6 +5,7 @@
 #include <fstream>
 #include <iomanip>
 #include <iostream>
+#include <chrono>
 
 using namespace std;
 
@@ -62,6 +63,7 @@ void test_lista:: stop()
 long test_lista:: get_time()
 {
   return 1000./CLOCKS_PER_SEC*(end-sta);
+
 }
 
 /*!
@@ -117,63 +119,32 @@ void test_lista::szukaj(string los)
 
 void test_lista::generateINT(int gen)
 {
-    int a, b;
-    int x;
-    std::fstream plik;
-
-
+int a, b;
     a = 0;
     b = 900000;
-    plik.open( "tekst.txt", std::ios::in | std::ios::out );
-    if( plik.good() == true )
-    {
-        for (int i = 0; i< gen; i++)
-        {
-            x = a+(rand() % (b-a+1));
-            plik << x << endl;
-        }
-    }
-    plik.close();
-
+std::ofstream plik("tekst.txt");
+for(int i = 0; i < gen; i++)
+    plik << a+(rand() % (b-a+1)) << endl;
 }
-
 
 // zapisdotabeli kod metody
 void test_lista::zapisDoTabeli()
 {
-  fstream plik;
-    plik.open("tekst.txt", std::ios::in | std::ios::out);
-    if(plik.good())
-	{
-        //ind =0;
-        while(!plik.eof())
-	    {
-	      plik >> tab[ind];
-	      ind++;
-	    }
-
-	}
-	plik.close();
+    int ind = 0;
+    std::ifstream plik("tekst.txt");
+    for(int wartosc; plik >> wartosc;)
+    {
+        tab[ind] = wartosc;
+        ind ++;
+    }
 }
 
-/*void test_lista::zapisdoPliku()
-{
-    ofstream plik;
-  plik.open( "posortowane.txt", std::ios::in | std::ios::out );
-    if( plik.good() == true )
-    {
-            plik << tab[ind] << endl;
-        }
-
-    plik.close();
-}*/
 void test_lista::zapisdoPliku(std::string const& nazwaPliku)
 {
-  std::ofstream strumienNaPlik (nazwaPliku, std::ios::app); // parametr ios::app powoduje to, ze do pliku bedziemy dopisywac linijki a nie nadpisywac
-    strumienNaPlik << tab[ind] << std::endl;
+  std::ofstream strumienNaPlik (nazwaPliku); // parametr ios::app powoduje to, ze do pliku bedziemy dopisywac linijki a nie nadpisywac
+    for( int i = 0; i < ilosc_elementow; i++){
+    strumienNaPlik << tab[i] << std::endl;}
 }
-
-
 
 /**************SO RT OW AN IA ********************/
 void test_lista::quick_sort(int tab[], int left, int right)
@@ -209,7 +180,7 @@ void test_lista::quick_sort(int tab[], int left, int right)
 
 
 
-void merge(int tab[], int start, int srodek, int koniec)
+void test_lista::merge(int tab[], int start, int srodek, int koniec)
 {
 int *tab_pom = new int[(koniec-start+1)]; // utworzenie tablicy pomocniczej
 int i = start, j = srodek+1, k = 0; // zmienne pomocnicze
@@ -250,23 +221,19 @@ k++;
 
 for (i = 0; i <= koniec-start+1; i++)
 tab[start+i] = tab_pom[i];
-
-cout << endl;
-for (i = start; i <= koniec; i++) // wypisanie posortowanej tablicy
-cout << "tablica[" << i << "] = " << tab[i] << endl;
 }
 
 
 
-void merge_sort(int tab[], int start, int koniec)
+void test_lista::mergesort(int tab[], int start, int koniec)
 {
 int srodek;
 
 if (start != koniec)
 {
 srodek = (start + koniec)/2;
-merge_sort(tab, start, srodek);
-merge_sort(tab, srodek+1, koniec);
+mergesort(tab, start, srodek);
+mergesort(tab, srodek+1, koniec);
 merge(tab, start, srodek, koniec);
 }
 }

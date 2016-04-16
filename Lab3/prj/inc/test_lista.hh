@@ -15,7 +15,8 @@ protected:
   int wynik;
 public:
     int ind;
-    int tab[100];
+    int ilosc_elementow;
+    int tab[1000000];
   test_lista();
   virtual void start();
   virtual void stop();
@@ -29,5 +30,7 @@ public:
   void szukaj(string los);
   void zapisDoTabeli();
   void zapisdoPliku(std::string const&);
+  //void zapisdoPliku(std::int const&);
   virtual bool run(int Argc,char* Argv[]);
+
 };
